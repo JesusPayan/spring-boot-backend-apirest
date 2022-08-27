@@ -1,10 +1,13 @@
 package com.bolsadeideas.springboot.backend.apirest.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.bolsadeideas.springboot.backend.apirest.entity.Cliente;
 
-import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ClientRepository extends JpaRepository <Cliente,Long>{
-    public List<Cliente> findAll();
+
+@Repository
+public interface ClientRepository extends CrudRepository<Cliente,Long> {
+//esta interfaz es la que permite heredar los metodos de la clase JpaRepository
 }
